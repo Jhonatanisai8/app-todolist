@@ -37,4 +37,10 @@ public class TareaController {
         );
     }
 
+    @DeleteMapping("/{id}")
+    public ResponseEntity<Void> eliminarTarea(@PathVariable Long id) {
+        tareaService.eliminarTarea(id);
+        return ResponseEntity.noContent().build();
+    }
+
 }
