@@ -9,4 +9,6 @@ public interface ITareaService {
     List<TareaDTORes> listarTareas();
 
     TareaDTOReq registrarTarea(TareaDTOReq tareaDTOReq);
+
+    void eliminarTarea(Long id);
 }
