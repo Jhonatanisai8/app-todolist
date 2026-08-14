@@ -2,7 +2,15 @@ import React, { useState } from "react";
 import { useTareas } from "../hooks/useTareas";
 
 export const ListaTareas = () => {
-  const { tareas, loading, error, agregarTarea, borrarTarea, refetch } = useTareas();
+  const { 
+    tareas, 
+    loading, 
+    error, 
+    agregarTarea,
+    borrarTarea,
+    refetch } = useTareas();
+
+    
   const [nuevoTitulo, setNuevoTitulo] = useState("");
   const [submitting, setSubmitting] = useState(false);
 
