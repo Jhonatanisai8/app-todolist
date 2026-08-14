@@ -1,0 +1,16 @@
+services:
+  mysql-db:
+    image: mysql:8.0
+    container_name: mysql_database_todolist
+    restart: always
+    ports:
+      - "3308:3306"
+    environment:
+      MYSQL_ROOT_PASSWORD: admin123
+      MYSQL_DATABASE: todolist_db
+      MYSQL_USER: my_db_user
+      MYSQL_PASSWORD: my_db_password
+    volumes:
+      - mysql_data:/var/lib/mysql
+volumes:
+  mysql_data:
